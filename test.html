@@ -1,0 +1,20 @@
+<body>
+  <button id="increment-button">
+    add
+  </button>     
+  <p id="counter">0</p> 
+  <script>
+    function onInit() {
+      const button = document.getElementById('increment-button');
+      
+      button.addEventListener('click', () => {
+        const textElement = document.getElementById('counter');
+        const currentValue = parseInt(textElement.innerText);
+        const newValue = currentValue + 1;
+        textElement.innerText = newValue.toString();
+      });
+    }
+
+    onInit();
+  </script>
+</body>
